@@ -12,7 +12,6 @@ body {
     margin:auto;
     padding: 0 25px 40px 10px;
     background-color: #ffffff;
-    border-radius:5px;
     color: #000000;
     font-weight: bold;
 }
@@ -68,3 +67,12 @@ button {
     display:none;
     width: 90px;
 }
+
+#music {
+    box-sizing: border-box;
+    width:50%;
+    margin:auto;
+    padding: 0 25px 40px 10px;
+    font-weight: bold;
+}
+
