@@ -6,11 +6,27 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+#flag {
+    box-sizing: border-box;
+    text-indent: -9999px;
+    background: url('../images/Texas-shape.png');
+    margin: auto;
+    width: 100px;
+    height: 98px;
+    background-repeat: no-repeat;
+    padding
+}
+
 #container {
+    border: 2px;
+    border-style: solid;
     box-sizing: border-box;
     width:50%;
-    margin:auto;
-    padding: 0 25px 40px 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding: 0px 25px 40px 10px;
     background-color: #ffffff;
     color: #000000;
     font-weight: bold;
@@ -72,7 +88,8 @@ button {
     box-sizing: border-box;
     width:50%;
     margin:auto;
-    padding: 0 25px 40px 10px;
+    padding: 0;
     font-weight: bold;
 }
+
 

@@ -145,11 +145,11 @@ $(document).ready(function() {
         }
       }
 
-      score.append('You got ' + numCorrect + ' questions out of ' +
+      score.append('Yee Haw! You got ' + numCorrect + ' questions out of ' +
                    questions.length + ' right!');
       return score;
     }
-    
+
 function setVolume() {
     $("#Deep-In-The-Heart.mp3").prop('volume', 0.5);
 }
