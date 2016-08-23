@@ -3,19 +3,23 @@ $(document).ready(function() {
       question: "Texas is popularly known as The _____ _____ State.",
       choices: ["Really Huge", "Lone Star", "Rio Grande", "Open Range"],
       correctAnswer: 1
-    }, {
+    }, 
+    {
       question: "Which of these nations has not flown their flag over Texas?",
       choices: ["France", "Spain", "Republic of Texas", "Great Britain"],
       correctAnswer: 3
-    }, {
+    }, 
+    {
       question: "Which city is the capital of Texas?",
       choices: ["Houston", "Dallas", "Austin", "Galveston"],
       correctAnswer: 2
-    }, {
+    }, 
+    {
       question: "How did Texas become part of the United States?",
       choices: ["Annexation", "Surrender", "Land Grab", "Treaty"],
       correctAnswer: 3
-    }, {
+    }, 
+    {
       question: "Where did the word Texas come from?",
       choices: ["Native American Tribe", "Mexico", "Spain", "France"],
       correctAnswer: 0
@@ -35,6 +39,7 @@ $(document).ready(function() {
       }
       choose();
 
+      // Check to see if no answer was selected before submitting
       if (isNaN(selections[questionCounter])) {
         alert('Please make a selection!');
       } else {
@@ -66,12 +71,12 @@ $(document).ready(function() {
       $('#start').hide();
     });
 
-    $('.button').on('mouseenter', function () {
-      $(this).addClass('active');
-    });
-    $('.button').on('mouseleave', function () {
-      $(this).removeClass('active');
-    });
+    // $('.button').on('mouseenter', function () {
+    //   $(this).addClass('active');
+    // });
+    // $('.button').on('mouseleave', function () {
+    //   $(this).removeClass('active');
+    // });
 
     function createQuestionElement(index) {
       var qElement = $('<div>', {
@@ -97,7 +102,7 @@ $(document).ready(function() {
       for (var i = 0; i < questions[index].choices.length; i++) {
         item = $('<li>');
         input = '<input type="radio" name="answer" value=' + i + ' />';
-        input += questions[index].choices[i];
+        input += "  " + questions[index].choices[i];
         item.append(input);
         radioList.append(item);
       }
@@ -105,7 +110,7 @@ $(document).ready(function() {
     }
 
     function choose() {
-      selections[questionCounter] = +$('input[name="answer"]:checked').val();
+      selections[questionCounter] = $('input[name="answer"]:checked').val();
     }
 
     function displayNext() {
